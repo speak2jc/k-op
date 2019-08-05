@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k-op
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: k-op
+  template:
+    metadata:
+      labels:
+        name: k-op
+    spec:
+      serviceAccountName: k-op
+      containers:
+        - name: k-op
+          # Replace this with the built image name
+          image: REPLACE_IMAGE
+          command:
+          - k-op
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "k-op"
