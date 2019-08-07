@@ -2,7 +2,7 @@
 
 // Package v1alpha1 contains API Schema definitions for the example v1alpha1 API group
 // +k8s:deepcopy-gen=package,register
-// +groupName=example.kenzan.com
+// +groupName=example.keeva.com
 package v1alpha1
 
 import (
@@ -12,7 +12,7 @@ import (
 
 var (
 	// SchemeGroupVersion is group version used to register these objects
-	SchemeGroupVersion = schema.GroupVersion{Group: "example.kenzan.com", Version: "v1alpha1"}
+	SchemeGroupVersion = schema.GroupVersion{Group: "example.keeva.com", Version: "v1alpha1"}
 
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme
 	SchemeBuilder = &scheme.Builder{GroupVersion: SchemeGroupVersion}

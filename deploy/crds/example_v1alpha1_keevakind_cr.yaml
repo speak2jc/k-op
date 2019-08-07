@@ -1,0 +1,7 @@
+apiVersion: example.keeva.com/v1alpha1
+kind: Keevakind
+metadata:
+  name: example-keevakind
+spec:
+  # Add fields here
+  size: 3

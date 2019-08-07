@@ -53,7 +53,7 @@ rules:
   verbs:
   - get
 - apiGroups:
-  - example.kenzan.com
+  - example.keeva.com
   resources:
   - '*'
   verbs:
