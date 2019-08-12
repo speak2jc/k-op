@@ -9,6 +9,7 @@ import (
 
 // KeevakindSpec defines the desired state of Keevakind
 // +k8s:openapi-gen=true
+// +genclient
 type KeevakindSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
@@ -21,6 +22,7 @@ type KeevakindSpec struct {
 
 // KeevakindStatus defines the observed state of Keevakind
 // +k8s:openapi-gen=true
+// +genclient
 type KeevakindStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
@@ -34,6 +36,7 @@ type KeevakindStatus struct {
 // Keevakind is the Schema for the keevakinds API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
+// +genclient
 type Keevakind struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
@@ -45,6 +48,7 @@ type Keevakind struct {
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // KeevakindList contains a list of Keevakind
+// +genclient
 type KeevakindList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
