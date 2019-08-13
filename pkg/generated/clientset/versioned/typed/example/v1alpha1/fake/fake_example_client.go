@@ -32,18 +32,6 @@ func (c *FakeExampleV1alpha1) Keevakinds(namespace string) v1alpha1.KeevakindInt
 	return &FakeKeevakinds{c, namespace}
 }
 
-func (c *FakeExampleV1alpha1) KeevakindLists(namespace string) v1alpha1.KeevakindListInterface {
-	return &FakeKeevakindLists{c, namespace}
-}
-
-func (c *FakeExampleV1alpha1) KeevakindSpecs(namespace string) v1alpha1.KeevakindSpecInterface {
-	return &FakeKeevakindSpecs{c, namespace}
-}
-
-func (c *FakeExampleV1alpha1) KeevakindStatuses(namespace string) v1alpha1.KeevakindStatusInterface {
-	return &FakeKeevakindStatuses{c, namespace}
-}
-
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
 func (c *FakeExampleV1alpha1) RESTClient() rest.Interface {

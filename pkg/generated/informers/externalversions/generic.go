@@ -55,12 +55,6 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 	// Group=example.keeva.com, Version=v1alpha1
 	case v1alpha1.SchemeGroupVersion.WithResource("keevakinds"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Example().V1alpha1().Keevakinds().Informer()}, nil
-	case v1alpha1.SchemeGroupVersion.WithResource("keevakindlists"):
-		return &genericInformer{resource: resource.GroupResource(), informer: f.Example().V1alpha1().KeevakindLists().Informer()}, nil
-	case v1alpha1.SchemeGroupVersion.WithResource("keevakindspecs"):
-		return &genericInformer{resource: resource.GroupResource(), informer: f.Example().V1alpha1().KeevakindSpecs().Informer()}, nil
-	case v1alpha1.SchemeGroupVersion.WithResource("keevakindstatuses"):
-		return &genericInformer{resource: resource.GroupResource(), informer: f.Example().V1alpha1().KeevakindStatuses().Informer()}, nil
 
 	}
 

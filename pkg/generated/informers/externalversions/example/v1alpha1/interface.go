@@ -26,12 +26,6 @@ import (
 type Interface interface {
 	// Keevakinds returns a KeevakindInformer.
 	Keevakinds() KeevakindInformer
-	// KeevakindLists returns a KeevakindListInformer.
-	KeevakindLists() KeevakindListInformer
-	// KeevakindSpecs returns a KeevakindSpecInformer.
-	KeevakindSpecs() KeevakindSpecInformer
-	// KeevakindStatuses returns a KeevakindStatusInformer.
-	KeevakindStatuses() KeevakindStatusInformer
 }
 
 type version struct {
@@ -48,19 +42,4 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 // Keevakinds returns a KeevakindInformer.
 func (v *version) Keevakinds() KeevakindInformer {
 	return &keevakindInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
-}
-
-// KeevakindLists returns a KeevakindListInformer.
-func (v *version) KeevakindLists() KeevakindListInformer {
-	return &keevakindListInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
-}
-
-// KeevakindSpecs returns a KeevakindSpecInformer.
-func (v *version) KeevakindSpecs() KeevakindSpecInformer {
-	return &keevakindSpecInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
-}
-
-// KeevakindStatuses returns a KeevakindStatusInformer.
-func (v *version) KeevakindStatuses() KeevakindStatusInformer {
-	return &keevakindStatusInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }

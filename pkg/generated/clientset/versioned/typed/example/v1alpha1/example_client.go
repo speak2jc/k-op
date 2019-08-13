@@ -27,9 +27,6 @@ import (
 type ExampleV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	KeevakindsGetter
-	KeevakindListsGetter
-	KeevakindSpecsGetter
-	KeevakindStatusesGetter
 }
 
 // ExampleV1alpha1Client is used to interact with features provided by the example.keeva.com group.
@@ -39,18 +36,6 @@ type ExampleV1alpha1Client struct {
 
 func (c *ExampleV1alpha1Client) Keevakinds(namespace string) KeevakindInterface {
 	return newKeevakinds(c, namespace)
-}
-
-func (c *ExampleV1alpha1Client) KeevakindLists(namespace string) KeevakindListInterface {
-	return newKeevakindLists(c, namespace)
-}
-
-func (c *ExampleV1alpha1Client) KeevakindSpecs(namespace string) KeevakindSpecInterface {
-	return newKeevakindSpecs(c, namespace)
-}
-
-func (c *ExampleV1alpha1Client) KeevakindStatuses(namespace string) KeevakindStatusInterface {
-	return newKeevakindStatuses(c, namespace)
 }
 
 // NewForConfig creates a new ExampleV1alpha1Client for the given config.
@@ -85,7 +70,7 @@ func setConfigDefaults(config *rest.Config) error {
 	gv := v1alpha1.SchemeGroupVersion
 	config.GroupVersion = &gv
 	config.APIPath = "/apis"
-	config.NegotiatedSerializer = scheme.Codecs.WithoutConversion()
+	//config.NegotiatedSerializer = scheme.Codecs.WithoutConversion()
 
 	if config.UserAgent == "" {
 		config.UserAgent = rest.DefaultKubernetesUserAgent()

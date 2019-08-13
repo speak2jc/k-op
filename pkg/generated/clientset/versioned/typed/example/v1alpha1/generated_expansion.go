@@ -19,9 +19,3 @@ limitations under the License.
 package v1alpha1
 
 type KeevakindExpansion interface{}
-
-type KeevakindListExpansion interface{}
-
-type KeevakindSpecExpansion interface{}
-
-type KeevakindStatusExpansion interface{}
