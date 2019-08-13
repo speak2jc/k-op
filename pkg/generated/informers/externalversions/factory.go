@@ -20,12 +20,12 @@ package externalversions
 
 import (
 	reflect "reflect"
-	versioned "speak2jc/k-op/pkg/generated/clientset/versioned"
-	example "speak2jc/k-op/pkg/generated/informers/externalversions/example"
-	internalinterfaces "speak2jc/k-op/pkg/generated/informers/externalversions/internalinterfaces"
 	sync "sync"
 	time "time"
 
+	versioned "github.com/speak2jc/k-op/pkg/generated/clientset/versioned"
+	example "github.com/speak2jc/k-op/pkg/generated/informers/externalversions/example"
+	internalinterfaces "github.com/speak2jc/k-op/pkg/generated/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

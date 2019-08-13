@@ -19,8 +19,8 @@ limitations under the License.
 package example
 
 import (
-	v1alpha1 "speak2jc/k-op/pkg/generated/informers/externalversions/example/v1alpha1"
-	internalinterfaces "speak2jc/k-op/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/speak2jc/k-op/pkg/generated/informers/externalversions/example/v1alpha1"
+	internalinterfaces "github.com/speak2jc/k-op/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

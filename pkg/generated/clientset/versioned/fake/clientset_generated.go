@@ -19,10 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "speak2jc/k-op/pkg/generated/clientset/versioned"
-	examplev1alpha1 "speak2jc/k-op/pkg/generated/clientset/versioned/typed/example/v1alpha1"
-	fakeexamplev1alpha1 "speak2jc/k-op/pkg/generated/clientset/versioned/typed/example/v1alpha1/fake"
-
+	clientset "github.com/speak2jc/k-op/pkg/generated/clientset/versioned"
+	examplev1alpha1 "github.com/speak2jc/k-op/pkg/generated/clientset/versioned/typed/example/v1alpha1"
+	fakeexamplev1alpha1 "github.com/speak2jc/k-op/pkg/generated/clientset/versioned/typed/example/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

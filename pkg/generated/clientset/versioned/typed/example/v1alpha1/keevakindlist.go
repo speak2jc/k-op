@@ -19,10 +19,10 @@ limitations under the License.
 package v1alpha1
 
 import (
-	scheme "speak2jc/k-op/pkg/generated/clientset/versioned/scheme"
 	"time"
 
 	v1alpha1 "github.com/speak2jc/k-op/pkg/apis/example/v1alpha1"
+	scheme "github.com/speak2jc/k-op/pkg/generated/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -42,7 +42,7 @@ type KeevakindListInterface interface {
 	Delete(name string, options *v1.DeleteOptions) error
 	DeleteCollection(options *v1.DeleteOptions, listOptions v1.ListOptions) error
 	Get(name string, options v1.GetOptions) (*v1alpha1.KeevakindList, error)
-	List(opts v1.ListOptions) (*v1alpha1.KeevakindListList, error)
+	List(opts v1.ListOptions) (*v1alpha1.KeevakindList, error)
 	Watch(opts v1.ListOptions) (watch.Interface, error)
 	Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *v1alpha1.KeevakindList, err error)
 	KeevakindListExpansion

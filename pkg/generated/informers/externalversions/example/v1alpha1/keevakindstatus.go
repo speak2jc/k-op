@@ -19,12 +19,12 @@ limitations under the License.
 package v1alpha1
 
 import (
-	versioned "speak2jc/k-op/pkg/generated/clientset/versioned"
-	internalinterfaces "speak2jc/k-op/pkg/generated/informers/externalversions/internalinterfaces"
-	v1alpha1 "speak2jc/k-op/pkg/generated/listers/example/v1alpha1"
 	time "time"
 
 	examplev1alpha1 "github.com/speak2jc/k-op/pkg/apis/example/v1alpha1"
+	versioned "github.com/speak2jc/k-op/pkg/generated/clientset/versioned"
+	internalinterfaces "github.com/speak2jc/k-op/pkg/generated/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/speak2jc/k-op/pkg/generated/listers/example/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

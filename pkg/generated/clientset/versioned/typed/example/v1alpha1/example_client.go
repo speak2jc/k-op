@@ -19,9 +19,8 @@ limitations under the License.
 package v1alpha1
 
 import (
-	"speak2jc/k-op/pkg/generated/clientset/versioned/scheme"
-
 	v1alpha1 "github.com/speak2jc/k-op/pkg/apis/example/v1alpha1"
+	"github.com/speak2jc/k-op/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

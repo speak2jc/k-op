@@ -20,8 +20,8 @@ package versioned
 
 import (
 	"fmt"
-	examplev1alpha1 "speak2jc/k-op/pkg/generated/clientset/versioned/typed/example/v1alpha1"
 
+	examplev1alpha1 "github.com/speak2jc/k-op/pkg/generated/clientset/versioned/typed/example/v1alpha1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
