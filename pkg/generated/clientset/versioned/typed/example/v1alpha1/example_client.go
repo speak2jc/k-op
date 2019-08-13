@@ -20,6 +20,8 @@ package v1alpha1
 
 import (
 	v1alpha1 "github.com/speak2jc/k-op/pkg/apis/example/v1alpha1"
+	"github.com/speak2jc/k-op/pkg/generated/clientset/versioned/scheme"
+
 	//"github.com/speak2jc/k-op/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
@@ -70,7 +72,7 @@ func setConfigDefaults(config *rest.Config) error {
 	gv := v1alpha1.SchemeGroupVersion
 	config.GroupVersion = &gv
 	config.APIPath = "/apis"
-	//config.NegotiatedSerializer = scheme.Codecs.WithoutConversion()
+	config.NegotiatedSerializer = scheme.Codecs.WithoutConversion()
 
 	if config.UserAgent == "" {
 		config.UserAgent = rest.DefaultKubernetesUserAgent()
