@@ -52,4 +52,20 @@ Observations
 - In contrast to corporate setup, changes in this project seem to be immediately effective in the second project even if not yet pushed to github.com (this is really good!) 
 
 
+notes
+when attempting the above steps on an existing project, the code gen succeeded but generated code that was not compatible with the versions of other k8s objects brought into go.mod by operator sdk new. the tell tale is codec.without... not being found. to get around it, I copied all of the steps not from here but rather from sample controller project standard k8s example.
+
+The version of code gen is also important. you can't specify version with go get so to get the right one, ensure you add to go.mod and also include tools.go under hack otherwise it will simply be removed from go.mod
+
+after code is generated, it can still have issues. These will not surface until you try to use them, so this project will probably compile and build but the dependent project will fail when objects are imported and used... so to save time, it pays to eyeball the generated code now
+
+failures are often due to wrong code gen version or the fact that the operator ask version originally used did not generate the code that this code gen expects... usually addtoscheme in register.go next to types file. you can manually add this line by copying from sample controller.
+as a foolproof strategy you would probably need to re run operator ask new and copy across the parts that changed.
+
+do not try deleting lines in gen code that don't compile. they will def be needed later and you will be confused. instead try supplying the things they can't find
+
+
+
+
+
  
